@@ -1,10 +1,21 @@
-window.getMovies = (api, search) => {
+
+window.onload = () =>{
+let api = "9ec2e051"
+let search="Batman"
+let key = `http://www.omdbapi.com/?apikey=${api}&s=${search}&plot=full&type=series`;
+
+fetch(key)
+.then(response =>response.json())
+.then(data =>{
+ data;
+ document.getElementById("movie").innerHTML = data.Search[0].Title;
+//window.getMovies
  
-  let key = `http://www.omdbapi.com/?apikey=${api}&s=${search}&plot=full&type=series`;
- 
-  fetch(key)
-  .then(response =>response.json())
-  .then(data =>{
+})
+.catch(error => {console.log('error');})
+}
+
+window.getMovies = (data) => {
       
       console.log(data);
       data.Search.forEach (function(element) {
@@ -16,13 +27,11 @@ window.getMovies = (api, search) => {
       });
       
     
-  })
-  .catch(error => {
-      console.log('error');
-  })
+    
+    
+  
     
   
 
 }
 
-window.getMovies("9ec2e051","Batman" );
