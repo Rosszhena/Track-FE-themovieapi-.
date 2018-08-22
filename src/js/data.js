@@ -8,7 +8,11 @@ window.getMovies = (api, search) => {
       
       console.log(data);
       data.Search.forEach (function(element) {
-        console.log(element);
+      
+        let array = [];
+        array.push(element);
+        console.log(array);
+        return array
       });
       
     
