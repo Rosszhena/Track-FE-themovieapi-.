@@ -4,14 +4,16 @@ let btnBatman = document.getElementById("Batman");
 let key = "9ec2e051";
 
 btnWonderWoman.addEventListener("click", event => {
-    
-    window.getMovies(key, "WonderWoman").then((infoPelicula)=>{
+    document.getElementById("galeria").innerHTML = '';
+    window.getMovies(key, "Wonder Woman").then((infoPelicula)=>{
         console.log(infoPelicula.Search)
+        
         let peliculas = infoPelicula.Search;
         
         peliculas.forEach(pelicula => {
             if(pelicula.Poster === "N/A"){
-                document.getElementById("galeria").innerHTML += "";
+                
+         
                 document.getElementById("galeria").innerHTML += `<div><h1>${pelicula.Title}</h1><img src="img/WonderWoman.jpg"></div>`}
             else{
             document.getElementById("galeria").innerHTML += `<div class="card">
@@ -44,9 +46,9 @@ btnWonderWoman.addEventListener("click", event => {
 
 
 btnBatman.addEventListener("click", event => {
-    
+    document.getElementById("galeria").innerHTML = '';
     window.getMovies(key, "Batman").then((infoPelicula)=>{
-        document.getElementById("galeria").innerHTML += "";
+        
         console.log(infoPelicula.Search)
         let peliculas = infoPelicula.Search;
     
@@ -83,7 +85,7 @@ btnBatman.addEventListener("click", event => {
 });
 
 btnSpiderman.addEventListener("click", event => {
-    
+    document.getElementById("galeria").innerHTML = "";
     window.getMovies(key, "Spiderman").then((infoPelicula)=>{
         
         console.log(infoPelicula.Search)
@@ -91,7 +93,7 @@ btnSpiderman.addEventListener("click", event => {
     
         peliculas.forEach(pelicula => {
             if(pelicula.Poster =="N/A"){
-                document.getElementById("galeria").innerHTML += "";
+                
                 document.getElementById("galeria").innerHTML += `<div><h1>${pelicula.Title}</h1><img src="img/Spider-Man.jpg"></div>`}
             else{
             document.getElementById("galeria").innerHTML += `<div class="card">
