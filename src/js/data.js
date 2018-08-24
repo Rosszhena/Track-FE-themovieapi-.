@@ -8,6 +8,7 @@ fetch(key)
 .then(response =>response.json())
 .then(data =>{
  data;
+ //console.log(data)
  document.getElementById("movie").innerHTML = data.Search[0].Title;
 //window.getMovies
  
