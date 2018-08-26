@@ -1,12 +1,15 @@
 let btnWonderWoman = document.getElementById("WonderWoman");
 let btnSpiderman = document.getElementById("Spiderman"); 
 let btnBatman = document.getElementById("Batman");
+let btnSearch = document.getElementById("btnSearch");
 let key = "9ec2e051";
+
 
 btnWonderWoman.addEventListener("click", event => {
     document.getElementById("galeria").innerHTML = '';
     window.getMovies(key, "Wonder Woman").then((infoPelicula)=>{
         drawMovies(infoPelicula);
+     
     });
 });
 
@@ -24,8 +27,19 @@ btnSpiderman.addEventListener("click", event => {
     });
 });
 
-       const drawMovies = (infoPelicula) =>{
-        let peliculas = infoPelicula.Search;
+btnSearch.addEventListener("click", event => {
+    document.getElementById("galeria").innerHTML = "";
+    let txtSearch = document.getElementById("txtSearch").value;
+    console.log(txtSearch)
+    window.getMovies(key, txtSearch).then((infoPelicula)=>{
+        drawMovies(infoPelicula);
+    });
+});
+
+
+
+const drawMovies = (infoPelicula) =>{
+let peliculas = infoPelicula.Search;
         
         peliculas.forEach(pelicula => {
             if(pelicula.Poster === "N/A"){
