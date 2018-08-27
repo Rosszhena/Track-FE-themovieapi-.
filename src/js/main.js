@@ -4,6 +4,8 @@ let btnBatman = document.getElementById("Batman");
 let btnSearch = document.getElementById("btnSearch");
 let key = "9ec2e051";
 
+
+
 btnWonderWoman.addEventListener("click", event => {
     document.getElementById("galeria").innerHTML = '';
     window.getMovies(key, "Wonder Woman").then((infoPelicula)=>{
