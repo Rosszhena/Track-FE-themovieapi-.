@@ -56,8 +56,8 @@ window.social = {
   /* revisar donde mandar a llamar esta funcion observador(); */
   aparece: (user) => {
     if(user.emailVerified){
-   // location.href ="views/muro.html";
-    contenido.innerHTML =  `
+    location.href ="movie.html";
+    /*contenido.innerHTML =  `
       <div class="container mt-5">
       <div class="alert alert-success" role="alert">
         <h4 class="alert-heading">Bienvenido! ${user.email}</h4>
@@ -65,7 +65,7 @@ window.social = {
         <hr>
         <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
       </div>
-      <button class= "btn btn-danger" onclick="window.social.cerrar()">Cerrar sesión</button></div>`;
+      <button class= "btn btn-danger" onclick="window.social.cerrar()">Cerrar sesión</button></div>`;*/
     }
   },// llave aparece
   
