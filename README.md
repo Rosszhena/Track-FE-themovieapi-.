@@ -13,7 +13,9 @@ Trazas un plan técnico y propones desarrollar un catálogo que incluya películ
 - Tus commits deben de estar versionados a través de “git tag”, destacando los commits más relevantes del proyecto.
 - Contar con un README donde incluyas:
   - Nombre del proyecto
+  Api Movie
   - Descripción
+  Proyecto que permite 
   - Proceso de instalación
 - Utiliza estilos (Estlint) para JS y HTMLHint para HTML)
 - Cuida tu semántica y nomenclatura dentro de tus archivos
