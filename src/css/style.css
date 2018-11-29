@@ -1,0 +1,9 @@
+body {
+    background-image: url("../img/movie-choices.jpg");
+    background-repeat: no-repeat, repeat;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    background-attachment: inherit;
+}
