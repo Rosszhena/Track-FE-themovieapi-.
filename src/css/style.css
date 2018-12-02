@@ -2,8 +2,8 @@ body {
     background-image: url("../img/movie-choices.jpg");
     background-repeat: no-repeat, repeat;
     font-family: font-family: 'Dancing Script', cursive;
-    background-size: cover;
     background-position: center center;
     width: 100%;
     background-attachment: inherit;
+    background-color: black;
 }
